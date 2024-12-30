@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="q1.css">
+  
+</head>
+
+<body>
+    <header class="kanban-header">
+        <h1 class="kanban-title">Kanban Board</h1>
+    </header>
+
+    <main class="kanban-board">
+     
+        <section class="kanban-column" id="todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+            <h2 class="column-title">Todo</h2>
+            <div class="task-input-area">
+                <input type="text" class="task-input" id="todoInput" placeholder="Enter a task...">
+                <button class="task-add-btn" onclick="addTask('todo')">Add</button>
+            </div>
+            <div class="task-list"></div>
+        </section>
+
+        <section class="kanban-column" id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+            <h2 class="column-title">In Progress</h2>
+            <div class="task-list"></div>
+        </section>
+
+       
+        <section class="kanban-column" id="done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+            <h2 class="column-title">Done</h2>
+            <div class="task-list"></div>
+        </section>
+    </main>
+
+    <script src="q1.js"></script>
+</body>
+
+</html>
